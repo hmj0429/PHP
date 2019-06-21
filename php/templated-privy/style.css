@@ -1,0 +1,34 @@
+	.marqee{
+		height: 3em;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+        	background: #2980b9;
+        	color:white;
+	}
+
+	.marqee &gt; ul{
+		padding-left: 0;
+		display: flex;
+		list-style-type: none;
+		animation: marqee 5s linear infinite;
+		position: absolute;
+	}
+
+	.marqee &gt; ul &gt; h1{
+		white-space: nowrap;
+		margin-right: 2em;
+		font-weight: bold;
+		color:white;
+	}
+
+	@keyframes marqee{
+		0%{
+			left: 100%;
+			transform: translateX(0%);
+		}
+		100%{
+			left: 0;
+			transform: translateX(-100%)
+		}
+	}
